@@ -1,0 +1,89 @@
+body {
+	background-color: skyblue;
+	margin: 0;
+}
+
+.land {
+	background-image: url('../images/bg-wrapper.png');
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 1024px;
+	height: 243px;
+}
+
+.container {
+	/*background-position: center bottom;
+	background-repeat: no-repeat;*/
+	height: 100vh;
+	width: 100vw;
+}
+
+.animacion {
+	/*background-color: crimson;*/
+	width: 166px;
+	height: 171px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	/*animation: tiempo | nombre de la animacion | repeticion*/
+}
+
+.animacion:hover {
+	/*background-color: crimson;*/
+}
+
+.animacion:hover .cabeza {
+	/*border: 10px solid crimson;*/
+	animation: 0.5s animacion infinite;
+	/*transform: translateY(5px);*/
+}
+
+.animacion:hover .ipad {
+	transform: rotate(-7deg);
+}
+
+.cuerpo {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.cabeza {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*transition: 0.3s;*/
+}
+
+.ipad {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	transition: 0.2s;
+}
+
+@keyframes animacion {
+	/*0% - 50% - 100%*/
+	/*from to*/
+/*	from {
+		/*border: 1px solid crimson;
+	}
+	to {
+		transform: translateY(5px);
+	}*/
+/*	0% {
+
+	}*/
+	50% {
+		transform: translateY(5px) rotate(2deg);
+
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
